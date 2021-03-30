@@ -1,7 +1,7 @@
 const config = {
     production: {
         PORT: process.env.PORT || 8000,
-        DB_CONNECTION: 'mongodb+srv://wickedlolz:residentevils1@cluster0.bwehj.gcp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+        DB_CONNECTION: 'mongodb+srv://wickedlolz:wickedlolz@cluster0.bwehj.gcp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
     },
     development: {
         PORT: process.env.PORT || 3000,
