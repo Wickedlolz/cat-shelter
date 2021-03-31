@@ -7,7 +7,6 @@ async function getAll(query) {
         let searchedCatToLowerCase = query.search.toLocaleLowerCase();
         result = result.filter(x => x.name.toLocaleLowerCase().includes(searchedCatToLowerCase));
     }
-    console.log(result);
 
     return result;
 }
