@@ -5,7 +5,8 @@ const breedService = require('../services/breedService');
 const router = Router();
 
 router.get('/', (req, res) => {
-    let cats = catService.getAll()
+    console.log(req.query);
+    let cats = catService.getAll(req.query)
         .then((cats) => {
             res.render('home', { cats });
         }).catch(() => res.status(500).end());

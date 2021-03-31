@@ -3,6 +3,12 @@ const Cat = require('../model/Cat');
 async function getAll(query) {
     let result = await Cat.find({}).lean();
 
+    if (query.search) {
+        let searchedCatToLowerCase = query.search.toLocaleLowerCase();
+        result = result.filter(x => x.name.toLocaleLowerCase().includes(searchedCatToLowerCase));
+    }
+    console.log(result);
+
     return result;
 }
 
